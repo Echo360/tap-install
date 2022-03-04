@@ -1,5 +1,17 @@
 #!/bin/bash
 
+#############################################
+# IMPORTANT NOTE                            #
+#                                           #
+# This install script should be copied to   # 
+# the public repository Echo360/tap-install #
+# so that it can be downloaded without      #
+# requiring the user to create a GitHub     #
+# Personal Access Token.                    #
+#                                           #
+#############################################
+
+
 set -u
 
 abort() {
@@ -74,7 +86,7 @@ then
 fi
 
 
-ohai "Tapping echo360/tap"
+ohai "Installing echo360/tap from GitHub"
 
 execute "brew" "tap" "echo360/tap" "git@github.com:Echo360/homebrew-tap.git"
 execute "command" "brew" "update" "--force" "--quiet"
